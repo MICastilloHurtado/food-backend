@@ -11,7 +11,7 @@ const {
   DB_URL
 } = process.env;
 
-const local = false
+const local = true
 
 const sequelize = local === false 
 ? new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/food`, {
