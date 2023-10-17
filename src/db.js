@@ -13,7 +13,7 @@ const {
 
 const local = false // false para conectarse a DB deployada
 
-const sequelize = local === false 
+const sequelize = local === true 
 ? new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/food`, {
   logging: false, // set to console.log to see the raw SQL queries
   native: false, // lets Sequelize know we can use pg-native for ~30% more speed
