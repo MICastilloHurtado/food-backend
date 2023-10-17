@@ -11,7 +11,7 @@ const {
   DB_URL
 } = process.env;
 
-const local = true
+const local = false // false para conectarse a DB deployada
 
 const sequelize = local === false 
 ? new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/food`, {
